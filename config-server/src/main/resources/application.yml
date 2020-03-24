@@ -8,8 +8,9 @@ spring:
   config:
    server:
     git:
-     uri: https://github.com/YadigarAlakbarli/spring-cloud-microservices-architecture/tree/master/config-repo
+     uri: https://github.com/YadigarAlakbarli/spring-cloud-microservices-architecture
      search-paths:
+      - "config-repo"
       - "*configs"
 
 eureka:
