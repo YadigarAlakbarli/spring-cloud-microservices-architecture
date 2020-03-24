@@ -13,4 +13,10 @@ management:
   endpoints:
     web:
       exposure:
-        exclude: *
+        exclude: "*"
+
+logging:
+  level:
+    com:
+      company:
+        eurekaserver: INFO
