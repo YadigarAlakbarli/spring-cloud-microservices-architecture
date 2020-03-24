@@ -1,1 +1,23 @@
 message: Success Message in user-api-dev.yml
+
+server:
+  port: 8081
+
+app:
+  id: ${random.uuid}
+
+spring:
+  application:
+    name: user-api
+eureka:
+  instance:
+    prefer-ip-address: true
+    hostname: localhost
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    eureka-server-connect-timeout-seconds: 5
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:8761/eureka/
+    eureka-connection-idle-timeout-seconds:
+

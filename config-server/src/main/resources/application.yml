@@ -10,8 +10,7 @@ spring:
     git:
      uri: https://github.com/YadigarAlakbarli/spring-cloud-microservices-architecture
      search-paths:
-      - "config-repo"
-      - "*configs"
+      - "config-repo/*configs"
 
 eureka:
  instance:
