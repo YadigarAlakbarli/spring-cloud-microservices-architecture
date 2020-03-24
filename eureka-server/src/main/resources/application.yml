@@ -13,13 +13,11 @@ eureka:
   serviceUrl:
     defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
 
-
-
 management:
   endpoints:
     web:
       exposure:
-        exclude: "*"
+        include: "*"
 
 logging:
   level:
