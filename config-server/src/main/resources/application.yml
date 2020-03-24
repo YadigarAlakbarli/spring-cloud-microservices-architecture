@@ -22,3 +22,8 @@ eureka:
   serviceUrl:
    defaultZone: http://${eureka.instance.hostname}:${eureka.client.eureka-server-port}/eureka/
 
+management:
+ endpoints:
+  web:
+   exposure:
+    include: "*"
