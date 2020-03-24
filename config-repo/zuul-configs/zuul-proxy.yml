@@ -27,7 +27,4 @@ management:
     web:
       exposure:
         include: "*"
-zuul:
-  routes:
-    path: /api/user/**
-      url: http://localhost:8081
+
