@@ -1,0 +1,44 @@
+spring:
+  application:
+    name: zuul-proxy
+  cloud:
+    config:
+      uri: http://localhost:8888
+  profiles:
+    active: dev
+
+
+
+
+message: Success Message in zuul-proxy.yml
+
+server:
+  port: 7777
+
+app:
+  id: ${random.uuid}
+
+
+
+eureka:
+  instance:
+    prefer-ip-address: true
+    hostname: localhost
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    eureka-server-connect-timeout-seconds: 5
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:8761/eureka/
+    eureka-connection-idle-timeout-seconds: 30
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+zuul:
+  routes:
+    path: /api/user/**
+      url: http://localhost:8080/
