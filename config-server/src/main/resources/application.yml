@@ -8,4 +8,17 @@ spring:
   config:
    server:
     git:
-     uri:
+     uri: https://github.com/YadigarAlakbarli/spring-cloud-microservices-architecture/tree/master/config-repo
+     search-paths:
+      - "*configs"
+
+eureka:
+ instance:
+  hostname: localhost
+ client:
+  eureka-server-port: 8761
+  fetch-registry: true
+  register-with-eureka: true
+  serviceUrl:
+   defaultZone: http://${eureka.instance.hostname}:${eureka.client.eureka-server-port}/eureka/
+
