@@ -10,10 +10,10 @@ import org.springframework.web.bind.annotation.RestController;
 public class UserController {
 
     @Value("${app.id}")
-    private int id;
+    private String id;
 
     @GetMapping("/instance")
     public  String getInstanceId(){
-        return "Your app id->"+id;
+        return "Your app id:"+id;
     }
 }

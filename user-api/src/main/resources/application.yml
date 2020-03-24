@@ -17,4 +17,5 @@ eureka:
     eureka-server-connect-timeout-seconds: 5
     serviceUrl:
       defaultZone: http://${eureka.instance.hostname}:8761/eureka/
+    eureka-connection-idle-timeout-seconds:
 
