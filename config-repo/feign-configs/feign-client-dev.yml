@@ -1,4 +1,4 @@
-message: Success Message in feign-client.yml
+message: Success Message in feign-client-dev.yml
 
 server:
   port: 8081
@@ -6,7 +6,13 @@ server:
 app:
   id: ${random.uuid}
 
-
+feign:
+  client:
+    config:
+      default:
+        connectTimeout: 5000
+        readTimeout: 5000
+        loggerLevel: basic
 eureka:
   instance:
     prefer-ip-address: true
@@ -19,10 +25,8 @@ eureka:
       defaultZone: http://${eureka.instance.hostname}:8761/eureka/
     eureka-connection-idle-timeout-seconds: 30
 
-
 management:
   endpoints:
     web:
       exposure:
         include: "*"
-

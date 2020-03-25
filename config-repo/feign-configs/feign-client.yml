@@ -1,12 +1,18 @@
 message: Success Message in feign-client.yml
 
 server:
-  port: 8081
+  port: 6666
 
 app:
   id: ${random.uuid}
 
-
+feign:
+  client:
+    config:
+      default:
+        connectTimeout: 5000
+        readTimeout: 5000
+        loggerLevel: basic
 eureka:
   instance:
     prefer-ip-address: true
