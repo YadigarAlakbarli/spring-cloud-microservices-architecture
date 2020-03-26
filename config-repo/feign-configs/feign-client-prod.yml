@@ -1,7 +1,7 @@
 message: Success Message in feign-client-prod.yml
 
 server:
-  port: 8081
+  port: 6666
 
 app:
   id: ${random.uuid}
