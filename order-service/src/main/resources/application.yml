@@ -1,0 +1,25 @@
+server:
+  port: 9094
+app:
+  id: ${random.uuid}
+spring:
+  application:
+    name: ORDER-SERVICE
+
+  h2:
+    console:
+      enabled: true
+
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:8761/eureka/
