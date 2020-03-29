@@ -1,4 +1,4 @@
-message: Success Message in user-api-prod.yml
+message: Success Message in feign-client-prod.yml
 
 server:
   port: 8081
@@ -6,9 +6,6 @@ server:
 app:
   id: ${random.uuid}
 
-spring:
-  application:
-    name: user-api
 eureka:
   instance:
     prefer-ip-address: true
