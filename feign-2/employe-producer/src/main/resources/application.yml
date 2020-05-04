@@ -1,0 +1,15 @@
+server:
+  port:8081
+
+spring:
+  application:
+    name: employe-producer
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+
+  instance:
+    instance-id: ${random.uuid}
+    prefer-ip-address: true

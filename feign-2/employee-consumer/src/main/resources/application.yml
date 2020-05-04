@@ -1,0 +1,24 @@
+app:
+  id: ${spring.application.name}:${random.uuid}
+
+spring:
+  application:
+    name: employe-consumer
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+    prefer-ip-address: true
+
+server:
+  port: 9091
+
+
+management:
+  endpoints:
+    shutdown:
+      enabled: true
+    web:
+      exposure:
+        exclude: *
